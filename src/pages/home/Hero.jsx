@@ -496,7 +496,7 @@ export default function HomeHeroPage() {
   return (
     <>
       <section className="bg-zinc-950 overflow-x-hidden">
-        <div className="relative top-20 p-10 mx-8">
+        <div className="relative top-20 p-10 ">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
@@ -519,14 +519,20 @@ export default function HomeHeroPage() {
                 author: "JOANNA WELLICK . APRIL 28,2019",
               },
             ].map((item, index) => (
-              <div key={index} className="relative">
-                <div className="sticky top-0">
-                  <img
-                    className="w-full h-[300px] sm:h-[250px] md:h-[300px] object-cover"
-                    src={item.image}
-                    alt=""
-                  />
+              <div
+                key={index}
+                className="relative h-[300px] sm:h-[250px] md:h-[300px] lg:h-[350px]"
+              >
+                {/* Background Image Container with fixed effect */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center bg-fixed"
+                  style={{ backgroundImage: `url(${item.image})` }}
+                >
+                  {/* Semi-transparent black overlay */}
+                  <div className="absolute inset-0 bg-black opacity-50"></div>
                 </div>
+
+                {/* Content */}
                 <div className="absolute inset-0 flex items-center justify-center text-white z-10 p-5">
                   <div className="text-center">
                     <h3 className="font-bold text-xl mb-2">{item.category}</h3>
@@ -534,7 +540,7 @@ export default function HomeHeroPage() {
                       {item.title}
                     </h1>
                     <h5 className="text-xs mt-5 font-bold">{item.author}</h5>
-                    <button className="bg-zinc-700 p-2 text-xs mt-2 w-24 font-bold">
+                    <button className="bg-zinc-700 p-2 text-xs mt-2 w-24 font-bold hover:bg-white hover:text-black transition-all duration-300">
                       VIEW POST
                     </button>
                   </div>
@@ -551,20 +557,59 @@ export default function HomeHeroPage() {
           <div className="slider-container mx-10">
             <Slider {...settings}>
               {products.map((product) => (
-                <div key={product.id} className="slider-item ">
-                  <img
-                    src={product.img}
-                    alt={product.title}
-                    className="slider-image p-10"
-                    style={{
-                      position: "relative",
-                      height: "300px",
-                      width: "500px",
-                      objectFit: "cover",
-                      zIndex: 1,
-                    }}
-                  />
-                  <div className="slider-info text-gray-300  mt-5">
+                <div key={product.id} className="slider-item group relative">
+                  {/* Image with hover overlay */}
+                  <div className="relative overflow-hidden p-10">
+                    <img
+                      src={product.img}
+                      alt={product.title}
+                      className="slider-image transition-transform duration-500 group-hover:scale-105"
+                      style={{
+                        height: "300px",
+                        width: "500px",
+                        objectFit: "cover",
+                      }}
+                    />
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100 m-10">
+                      <div className="text-center">
+                        <button className="bg-white text-black px-6 py-2 font-bold text-sm hover:bg-black hover:text-white transition-all duration-300">
+                          VIEW POST
+                        </button>
+                        {/* Icons - replace with your actual icon components */}
+                        <div className="flex justify-center mt-4 space-x-4">
+                          <svg
+                            className="w-6 h-6 text-white hover:text-gray-300 cursor-pointer"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                            />
+                          </svg>
+                          <svg
+                            className="w-6 h-6 text-white hover:text-gray-300 cursor-pointer"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="slider-info text-gray-300 mt-5">
                     <h2 className="font-bold text-xs">{product.category}</h2>
                     <h2 className="text-xl mt-3 font-bold">{product.title}</h2>
                     <h5 className="text-xs mt-2">{product.date}</h5>
