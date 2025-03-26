@@ -527,7 +527,7 @@ export default function HomeHeroPage() {
 
   return (
     <>
-      <section className="bg-zinc-950 overflow-x-hidden">
+      <section className="bg-zinc-900 overflow-x-hidden">
         <div className="relative top-20 p-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -589,7 +589,7 @@ export default function HomeHeroPage() {
           <h2 className="font-bold text-white mb-10">TRENDING POSTS</h2>
 
           {/* Slider Component */}
-          <div className="slider-container mx-10">
+          <div className="slider-container ">
             <Slider {...settings}>
               {products.map((product) => (
                 <div key={product.id} className="slider-item group relative">
