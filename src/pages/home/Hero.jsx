@@ -44,6 +44,7 @@ import {
   faMessage,
   faReply,
   faRetweet,
+  faShare,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -245,21 +246,49 @@ export default function HomeHeroPage() {
     imageSize = "w-full",
   }) => (
     <div className="text-center text-zinc-400">
-      <img className={`${imageSize} object-cover mx-auto`} src={image} alt="" />
+      {/* Image with hover overlay */}
+      <div className="relative">
+        <img
+          className={`${imageSize} object-cover mx-auto`}
+          src={image}
+          alt=""
+        />
+        {/* Hover overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-all duration-300">
+          <div className="flex items-center space-x-2">
+            <span className="text-white font-bold text-sm">VIEW POST</span>
+            {/* Replace with your actual icons */}
+            <div className="flex space-x-2">
+              <FontAwesomeIcon icon={faShare} className="w-4 h-4 text-white" />
+              <FontAwesomeIcon icon={faEye} className="w-4 h-4 text-white" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h2 className="text-xs mt-10 font-semibold">{category}</h2>
       <h2 className="text-2xl font-bold">{title}</h2>
       <h5 className="text-xs mt-2 mb-5 font-bold">{author} . NO COMMENTS</h5>
       {description && <h2 className="text-sm">{description}</h2>}
-      <button className="bg-zinc-700 p-2 text-xs mt-2 w-24 font-bold">
+      <button className="bg-zinc-700 p-2 text-xs mt-2 w-24 font-bold hidden md:inline-block">
         VIEW POST
       </button>
-      <SocialShare />
+      <SocialShare className="hidden md:block" />
     </div>
   );
 
   const FeaturedImageCard = ({ image, category, title, className }) => (
-    <div className={`relative ${className}`}>
-      <img className="h-full w-full object-cover" src={image} alt="" />
+    <div
+      className={`relative ${className}`}
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        // Fixed effect only on large screens
+        backgroundAttachment: window.innerWidth >= 1024 ? "fixed" : "scroll",
+      }}
+    >
       <div className="absolute inset-0 flex items-center justify-center text-white z-10 p-20">
         <div className="text-center">
           <h3 className="font-bold text-sm mb-3">{category}</h3>
@@ -313,27 +342,30 @@ export default function HomeHeroPage() {
   );
 
   const SliderCard = ({ product }) => (
-    <div className="relative text-center mb-6 mt-24">
+    <div className="relative mb-6 mt-24 w-[350px] mx-auto">
       <img
-        className="h-[400px] w-[350px] object-cover"
+        className="h-[400px] w-full object-cover"
         src={product.image}
         alt={product.title}
       />
-      <div className="absolute inset-0 flex items-center justify-center text-zinc-300 mr-20 z-10 p-5">
-        <div className="text-center">
-          <h3 className="font-semibold text-sm mb-3">{product.category}</h3>
-          <h1>{product.title}</h1>
-          <div className="flex justify-center items-center gap-2 text-xs mt-3">
+
+      <div className="absolute inset-0 flex items-center justify-center z-10 p-5">
+        <div className="text-center text-zinc-300 bg-black bg-opacity-50 p-4 rounded-lg">
+          <h3 className="font-semibold text-sm mb-2">{product.category}</h3>
+          <h1 className="text-xl font-bold mb-3">{product.title}</h1>
+
+          <div className="flex justify-center items-center gap-3 text-xs mb-4">
             <div className="flex items-center gap-1">
-              <FontAwesomeIcon className="h-4" icon={faMessage} />
-              <h2>{product.comments} .</h2>
+              <FontAwesomeIcon className="h-3" icon={faMessage} />
+              <span>{product.comments}</span>
             </div>
             <div className="flex items-center gap-1">
-              <FontAwesomeIcon className="h-4" icon={faEye} />
-              <h2>{product.views}</h2>
+              <FontAwesomeIcon className="h-3" icon={faEye} />
+              <span>{product.views}</span>
             </div>
           </div>
-          <button className="bg-zinc-700 p-2 text-xs mt-2 w-24 font-bold">
+
+          <button className="bg-zinc-700 hover:bg-zinc-600 transition-colors py-2 px-4 text-xs font-bold rounded">
             VIEW POST
           </button>
         </div>
@@ -496,7 +528,7 @@ export default function HomeHeroPage() {
   return (
     <>
       <section className="bg-zinc-950 overflow-x-hidden">
-        <div className="relative top-20 p-10 ">
+        <div className="relative top-20 p-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
@@ -521,26 +553,30 @@ export default function HomeHeroPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="relative h-[300px] sm:h-[250px] md:h-[300px] lg:h-[350px]"
+                className="relative h-[300px] sm:h-[250px] md:h-[300px] lg:h-[350px] overflow-hidden group"
               >
-                {/* Background Image Container with fixed effect */}
+                {/* Background Image Container with fixed effect on larger screens */}
                 <div
-                  className="absolute inset-0 bg-cover bg-center lg:bg-fixed"
+                  className="absolute inset-0 bg-cover bg-center lg:bg-fixed transition-all duration-700 ease-out group-hover:scale-110"
                   style={{ backgroundImage: `url(${item.image})` }}
                 >
-                  {/* Semi-transparent black overlay */}
-                  <div className="absolute inset-0 bg-black opacity-50"></div>
+                  {/* Semi-transparent overlay */}
+                  <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-all duration-500"></div>
                 </div>
 
-                {/* Content */}
+                {/* Content with hover effects */}
                 <div className="absolute inset-0 flex items-center justify-center text-white z-10 p-5">
-                  <div className="text-center">
-                    <h3 className="font-bold text-xl mb-2">{item.category}</h3>
-                    <h1 className="text-3xl sm:text-2xl font-bold">
+                  <div className="text-center transform transition-all duration-500 ease-out group-hover:-translate-y-4 group-hover:scale-105">
+                    <h3 className="font-bold text-xl mb-2 group-hover:text-yellow-300 transition-colors duration-300">
+                      {item.category}
+                    </h3>
+                    <h1 className="text-3xl sm:text-2xl font-bold group-hover:text-white transition-colors duration-300">
                       {item.title}
                     </h1>
-                    <h5 className="text-xs mt-5 font-bold">{item.author}</h5>
-                    <button className="bg-zinc-700 p-2 text-xs mt-2 w-24 font-bold hover:bg-white hover:text-black transition-all duration-300">
+                    <h5 className="text-xs mt-5 font-bold opacity-80 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-500">
+                      {item.author}
+                    </h5>
+                    <button className="bg-zinc-700 p-2 text-xs mt-2 w-24 font-bold hover:bg-white hover:text-black transition-all duration-300 opacity-0 group-hover:opacity-100 transform group-hover:translate-y-4">
                       VIEW POST
                     </button>
                   </div>
@@ -549,7 +585,6 @@ export default function HomeHeroPage() {
             ))}
           </div>
         </div>
-
         <div className="mt-40 text-center p-10">
           <h2 className="font-bold text-white mb-10">TRENDING POSTS</h2>
 
@@ -559,11 +594,11 @@ export default function HomeHeroPage() {
               {products.map((product) => (
                 <div key={product.id} className="slider-item group relative">
                   {/* Image with hover overlay */}
-                  <div className="relative overflow-hidden p-10">
+                  <div className="relative overflow-hidden p-2">
                     <img
                       src={product.img}
                       alt={product.title}
-                      className="slider-image transition-transform duration-500 group-hover:scale-105"
+                      className="slider-image transition-transform duration-500 "
                       style={{
                         height: "300px",
                         width: "500px",
@@ -571,7 +606,7 @@ export default function HomeHeroPage() {
                       }}
                     />
                     {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100 m-10">
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100 ">
                       <div className="text-center">
                         <button className="bg-white text-black px-6 py-2 font-bold text-sm hover:bg-black hover:text-white transition-all duration-300">
                           VIEW POST
