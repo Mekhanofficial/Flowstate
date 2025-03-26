@@ -496,7 +496,7 @@ export default function HomeHeroPage() {
   return (
     <>
       <section className="bg-zinc-950 overflow-x-hidden">
-        <div className="relative top-20 p-10">
+        <div className="relative top-20 p-10 ">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
@@ -521,18 +521,15 @@ export default function HomeHeroPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="relative h-[300px] sm:h-[250px] md:h-[300px] lg:h-[350px] overflow-hidden"
+                className="relative h-[300px] sm:h-[250px] md:h-[300px] lg:h-[350px]"
               >
-                {/* Background Image Container */}
+                {/* Background Image Container with fixed effect */}
                 <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url(${item.image})`,
-                    backgroundAttachment: "fixed", // This creates the parallax effect
-                  }}
+                  className="absolute inset-0 bg-cover bg-center lg:bg-fixed"
+                  style={{ backgroundImage: `url(${item.image})` }}
                 >
                   {/* Semi-transparent black overlay */}
-                  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                  <div className="absolute inset-0 bg-black opacity-50"></div>
                 </div>
 
                 {/* Content */}
