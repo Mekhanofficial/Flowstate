@@ -496,7 +496,7 @@ export default function HomeHeroPage() {
   return (
     <>
       <section className="bg-zinc-950 overflow-x-hidden">
-        <div className="relative top-20 p-10 ">
+        <div className="relative top-20 p-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
@@ -521,15 +521,18 @@ export default function HomeHeroPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="relative h-[300px] sm:h-[250px] md:h-[300px] lg:h-[350px]"
+                className="relative h-[300px] sm:h-[250px] md:h-[300px] lg:h-[350px] overflow-hidden"
               >
-                {/* Background Image Container with fixed effect */}
+                {/* Background Image Container */}
                 <div
-                  className="absolute inset-0 bg-cover bg-center bg-fixed"
-                  style={{ backgroundImage: `url(${item.image})` }}
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${item.image})`,
+                    backgroundAttachment: "fixed", // This creates the parallax effect
+                  }}
                 >
                   {/* Semi-transparent black overlay */}
-                  <div className="absolute inset-0 bg-black opacity-50"></div>
+                  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
                 </div>
 
                 {/* Content */}
@@ -550,7 +553,7 @@ export default function HomeHeroPage() {
           </div>
         </div>
 
-        <div className="mt-40 text-center mx-10">
+        <div className="mt-40 text-center p-10">
           <h2 className="font-bold text-white mb-10">TRENDING POSTS</h2>
 
           {/* Slider Component */}
