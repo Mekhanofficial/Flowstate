@@ -12,7 +12,7 @@ import ProfileCard from "../../components/ProfileCard";
 import SocialIcons from "../../components/SocialIcons";
 import TrendingPostsSidebar from "../../components/TrendingPostSidebar";
 import SliderCard from "../../components/SliderCard";
-import td1 from "../../images/td1.jpg";
+// import td1 from "../../images/td1.jpg";
 import td2 from "../../images/td2.jpg";
 import td3 from "../../images/td3.jpg";
 import td4 from "../../images/td4.jpg";
@@ -114,7 +114,7 @@ export default function PageTen() {
   const products = [
     {
       id: 1,
-      img: td1,
+      img: td2,
       category: "STYLE",
       title: "6 Winning Artists Take On Modern Photography",
       date: "JOANNA WELLICK . APRIL 28,2019",
