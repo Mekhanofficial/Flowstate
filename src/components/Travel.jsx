@@ -1,0 +1,387 @@
+import Slider from "react-slick";
+import TrendingPosts from "./TrendingPost";
+import ArticleCard from "./ArticleCard";
+import SocialShare from "./SocialShare";
+import FeaturedImageCard from "./FeaturedImageCard";
+import InstagramProfile from "./InstagramProfile";
+import ProfileCard from "./ProfileCard";
+import TrendingPostsSidebar from "./TrendingPostSidebar";
+import SliderCard from "./SliderCard";
+
+import td4 from "../images/td4.jpg";
+import td5 from "../images/td5.jpg";
+
+import td9 from "../images/td9.jpg";
+import td10 from "../images/td10.jpg";
+import td11 from "../images/td11.jpg";
+import td12 from "../images/td12.jpg";
+import td13 from "../images/td13.jpg";
+import td14 from "../images/td14.jpg";
+import td15 from "../images/td15.jpg";
+import td16 from "../images/td16.jpg";
+import td17 from "../images/td17.jpg";
+import td18 from "../images/td18.jpg";
+import td19 from "../images/td19.jpg";
+import td20 from "../images/td20.jpg";
+import td21 from "../images/td21.jpg";
+import td22 from "../images/td22.jpg";
+import td23 from "../images/td23.jpg";
+import td24 from "../images/td24.jpg";
+import td25 from "../images/td25.jpg";
+import td26 from "../images/td26.jpg";
+import td27 from "../images/td27.jpg";
+import td28 from "../images/td28.jpg";
+import td29 from "../images/td29.jpg";
+import td30 from "../images/td30.jpg";
+import td31 from "../Images/td31.jpg";
+import td32 from "../Images/td32.jpg";
+import td33 from "../Images/td33.jpg";
+import td34 from "../Images/td34.jpg";
+import td35 from "../Images/td35.png";
+import td36 from "../Images/td36.jpg";
+import td37 from "../Images/td37.jpg";
+import td38 from "../Images/td38.jpg";
+import td39 from "../Images/td39.jpg";
+import td40 from "../Images/td40.jpg";
+import td41 from "../Images/td41.jpg";
+import td42 from "../Images/td42.jpg";
+import td43 from "../Images/td43.jpg";
+import td44 from "../Images/td44.jpg";
+import ballerina from "../images/ballerina.jpg";
+
+export default function Travel() {
+  const productsTwo = [
+    {
+      id: 1,
+      category: "LIFESTYLE",
+      title: "5 Artworks That Celebrate Strong Women",
+      image: td25,
+      comments: 0,
+      views: "1.3k",
+    },
+    {
+      id: 2,
+      category: "INTERIOR",
+      title: "Has Shock Art Become an Obsolete Term",
+      image: td26,
+      comments: 0,
+      views: "1.3k",
+    },
+    {
+      id: 3,
+      category: "TRAVEL",
+      title: "7 21st-Century Artworks You Need to Know Now",
+      image: td27,
+      comments: 0,
+      views: "1.3k",
+    },
+  ];
+
+  const settingsTwo = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+  return (
+    <>
+      <div className="bg-zinc-900">
+        <div className="flex flex-col lg:flex-row mx-4 md:mx-10">
+          {/* Left Content Section */}
+          <div className="flex-1">
+            <div className="text-gray-300 text-center mt-10 lg:mt-20 mx-auto max-w-4xl">
+              <h2 className="text-5xl font-semibold my-4">Travel</h2>
+              <p className="text-xs text-gray-700">9 POSTS</p>
+              <hr className="relative my-6 border-t-1 border-zinc-800" />
+              <h2 className="text-xs mb-5 font-bold">Travel</h2>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+                8 Essential Steps to Collecting Emerging Art
+              </h1>
+              <h5 className="text-xs mt-5 mb-10 font-bold">
+                JOANNA WELLICK . APRIL 28,2019 . NO COMMENTS
+              </h5>
+
+              <img
+                className="w-full mx-auto h-64 md:h-96 object-cover"
+                src={td34}
+                alt="Ballerina"
+              />
+
+              <h2 className="mt-10 text-gray-400 text-sm md:text-base lg:text-lg">
+                Structured gripped tape invisible moulded cups for sauppor firm
+                hold strong powermesh front liner sport detail. Warmth comfort
+                hangs loosely from the body large pocket at the front full
+                button…
+              </h2>
+
+              <button className="bg-zinc-700 p-2 text-xs mt-4 w-24 font-bold mx-auto block hover:bg-zinc-600 transition">
+                VIEW POST
+              </button>
+
+              <SocialShare className="mt-6" />
+            </div>
+
+            {/* Articles Grid */}
+            <div className="mt-16 lg:mt-20 text-white grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
+              {/* Left Column Articles */}
+              <div className="space-y-16 md:space-y-20">
+                <ArticleCard
+                  image={ballerina}
+                  category="STYLE"
+                  title="Arts Philanthropy: Should Museums Refuse Dirty Money"
+                  author="ELLIOT ALDERSON AND JOANNA WELLICK . MAY 22,2019"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
+                  className="max-w-full"
+                />
+
+                <ArticleCard
+                  image={td40}
+                  category="TRAVEL"
+                  title="Nostalgia, Painting, and the End of the World"
+                  author="ELLIOT ALDERSON. MAY 21,2019"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
+                  className="max-w-full"
+                />
+
+                <FeaturedImageCard
+                  image={td4}
+                  category="LIFESTYLE"
+                  title="Eww! 7 of the Grossest Contemporary Artworks"
+                  className="h-[300px] md:h-[400px] w-full"
+                />
+
+                <ArticleCard
+                  image={td41}
+                  category="TRAVEL"
+                  title="Have You Heard of Sound Art? 9 Sonic Artists to Know"
+                  author="Joanna Wellick. MAY 22,2019"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
+                  className="max-w-full"
+                />
+
+                <ArticleCard
+                  image={td42}
+                  category="LIFESTYLE"
+                  title="Museum Tours: Guided Tours of the Best Museums"
+                  author="Joanna Wellick. MAY 22,2019"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
+                  className="max-w-full"
+                />
+
+             
+              </div>
+
+              {/* Right Column Articles */}
+              <div className="space-y-16 md:space-y-20 mt-10 lg:mt-0">
+                <ArticleCard
+                  image={td27}
+                  category="TRAVEL"
+                  title="7 21st-Century Artworks You Need to Know Now"
+                  author="ELLIOT ALDERSON. MAY 22,2019"
+                  className="max-w-full"
+                />
+
+                <TrendingPosts
+                  posts={[
+                    {
+                      img: td9,
+                      title: "The 14 Best Art Museums in the World",
+                      date: "MAY 11,2019",
+                    },
+                    {
+                      img: td10,
+                      title: "The 14 Best Art Museums in the World",
+                      date: "MAY 11,2019",
+                    },
+                    {
+                      img: td11,
+                      title: "The 14 Best Art Museums in the World",
+                      date: "MAY 11,2019",
+                    },
+                    {
+                      img: td12,
+                      title: "The 14 Best Art Museums in the World",
+                      date: "MAY 11,2019",
+                    },
+                  ]}
+                  className="max-w-full"
+                />
+
+                <ArticleCard
+                  image={td43}
+                  category="INTERIOR"
+                  title="How to Start an Art Collection on Any Budget"
+                  author="ELLIOT ALDERSON. MAY 22,2019"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
+                  className="max-w-full"
+                />
+
+                <ArticleCard
+                  image={td44}
+                  category="INTERIOR"
+                  title="How to Start an Art Collection on Any Budget"
+                  author="ELLIOT ALDERSON. MAY 22,2019"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
+                  className="h-[500px] md:h-[600px] w-full"
+                />
+
+                <ArticleCard
+                  image={td18}
+                  category="INTERIOR"
+                  title="7 Cracking Christmas Outfits From Art History"
+                  author="Joanna Wellick. MAY 22,2019"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
+                  className="max-w-full"
+                />
+
+              
+
+              
+              </div>
+            </div>
+          </div>
+
+          {/* Right Sidebar */}
+          <div className="w-full lg:w-[30%] mt-10 lg:mt-0 lg:ml-5 lg:pl-5 space-y-8">
+            <div className="hidden lg:block">
+              <Slider {...settingsTwo}>
+                {productsTwo.map((product) => (
+                  <SliderCard key={product.id} product={product} />
+                ))}
+              </Slider>
+            </div>
+
+            <InstagramProfile
+              profileImg={td28}
+              username="CODESUPPLY.CO"
+              handle="CODE SUPPLY CO."
+              stats="33 FOLLOWING 35 FOLLOWERS"
+              images={[td21, td22, td23, td24, td29, td30]}
+              className="hidden lg:block"
+            />
+
+            <ProfileCard
+              profileImg={td28}
+              username="CODESUPPLY.CO"
+              handle="CODE SUPPLY CO."
+              stats="3 FOLLOWING 129 FOLLOWERS"
+              bio="It's been a long way, but we've just reached a huge 10k sales milestone..."
+              className="hidden lg:block"
+            />
+
+            <TrendingPostsSidebar
+              posts={[
+                {
+                  img: td9,
+                  title: "The 14 Best Art Museums in the World",
+                  date: "MAY 11,2019",
+                  views: "230 VIEWS",
+                },
+                {
+                  img: td10,
+                  title: "The 14 Best Art Museums in the World",
+                  date: "MAY 11,2019",
+                  views: "2.4k VIEWS",
+                },
+                {
+                  img: td11,
+                  title: "The 14 Best Art Museums in the World",
+                  date: "MAY 11,2019",
+                  views: "1.9k VIEWS",
+                },
+                {
+                  img: td12,
+                  title: "The 14 Best Art Museums in the World",
+                  date: "MAY 11,2019",
+                  views: "2.6k VIEWS",
+                },
+              ]}
+              className="hidden lg:block"
+            />
+            <div
+              className={`shop-sidebar w-full p-6 overflow-y-auto transition-all duration-300 md:sticky top-0 bottom-0 z-40 
+      }`}
+            >
+              <img
+                className="h-full w-full object-cover "
+                src={td31}
+                alt="Sticky"
+              />
+            </div>
+          </div>
+        </div>
+        <section className="bg-black py-16 px-8 my-16">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-medium text-zinc-100 mb-4">
+              Sign Up for Our Newsletters
+            </h2>
+            <p className="text-xl text-zinc-400 mb-8">
+              Get notified of the best deals on our WordPress themes.
+            </p>
+
+            <div className="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto">
+              <input
+                className="flex-grow px-5 py-3 bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="email"
+                placeholder="Enter your email"
+              />
+              <button className="px-8 py-3 bg-zinc-800 hover:bg-zinc-700 text-white font-medium transition-colors duration-200">
+                SUBSCRIBE
+              </button>
+            </div>
+
+            <div className="flex items-start mt-8 max-w-2xl mx-auto">
+              <input
+                type="checkbox"
+                id="terms-checkbox"
+                className="mt-1 mr-3"
+              />
+              <label
+                htmlFor="terms-checkbox"
+                className="text-xs text-zinc-400 text-left"
+              >
+                BY CHECKING THIS BOX, YOU CONFIRM THAT YOU HAVE READ AND ARE
+                AGREEING TO OUR TERMS OF USE REGARDING THE STORAGE OF THE DATA
+                SUBMITTED THROUGH THIS FORM.
+              </label>
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery Grid */}
+        <section className="">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-0">
+            {[td21, td22, td23, td24, td29, td30].map((imgSrc, index) => (
+              <div key={index} className="aspect-square overflow-hidden group">
+                <img
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  src={imgSrc}
+                  alt={`Gallery item ${index + 1}`}
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
