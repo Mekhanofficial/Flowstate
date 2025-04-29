@@ -33,20 +33,20 @@ import td27 from "../images/td27.jpg";
 import td28 from "../images/td28.jpg";
 import td29 from "../images/td29.jpg";
 import td30 from "../images/td30.jpg";
-import td31 from "../Images/td31.jpg";
-import td32 from "../Images/td32.jpg";
-import td33 from "../Images/td33.jpg";
-import td34 from "../Images/td34.jpg";
-import td35 from "../Images/td35.png";
-import td36 from "../Images/td36.jpg";
-import td37 from "../Images/td37.jpg";
-import td38 from "../Images/td38.jpg";
-import td39 from "../Images/td39.jpg";
-import td40 from "../Images/td40.jpg";
-import td41 from "../Images/td41.jpg";
-import td42 from "../Images/td42.jpg";
-import td43 from "../Images/td43.jpg";
-import td44 from "../Images/td44.jpg";
+import td31 from "../images/td31.jpg";
+import td32 from "../images/td32.jpg";
+import td33 from "../images/td33.jpg";
+import td34 from "../images/td34.jpg";
+import td35 from "../images/td35.png";
+import td36 from "../images/td36.jpg";
+import td37 from "../images/td37.jpg";
+import td38 from "../images/td38.jpg";
+import td39 from "../images/td39.jpg";
+import td40 from "../images/td40.jpg";
+import td41 from "../images/td41.jpg";
+import td42 from "../images/td42.jpg";
+import td43 from "../images/td43.jpg";
+import td44 from "../images/td44.jpg";
 import ballerina from "../images/ballerina.jpg";
 
 export default function Travel() {
@@ -185,8 +185,6 @@ export default function Travel() {
                   description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
                   className="max-w-full"
                 />
-
-             
               </div>
 
               {/* Right Column Articles */}
@@ -251,10 +249,6 @@ export default function Travel() {
                   description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
                   className="max-w-full"
                 />
-
-              
-
-              
               </div>
             </div>
           </div>

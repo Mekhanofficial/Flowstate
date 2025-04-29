@@ -1,4 +1,4 @@
-import td1 from "../Images/td1.jpg";
+import td1 from "../images/td1.jpg";
 import td2 from "../images/td1.jpg";
 import td3 from "../images/td3.jpg";
 import td4 from "../images/td4.jpg";
@@ -28,10 +28,10 @@ import td27 from "../images/td27.jpg";
 import td28 from "../images/td28.jpg";
 import td29 from "../images/td29.jpg";
 import td30 from "../images/td30.jpg";
-import td31 from "../Images/td31.jpg";
-import td32 from "../Images/td32.jpg";
-import td33 from "../Images/td33.jpg";
-import td34 from "../Images/td34.jpg";
+import td31 from "../images/td31.jpg";
+import td32 from "../images/td32.jpg";
+import td33 from "../images/td33.jpg";
+import td34 from "../images/td34.jpg";
 import ballerina from "../images/ballerina.jpg";
 import Slider from "react-slick";
 import TrendingPosts from "./TrendingPost";
@@ -412,7 +412,6 @@ export default function HomeHeroPage() {
                       description="Structured gripped tape invisible moulded cups..."
                       className="max-w-full "
                     />
-                    
                   </Link>
                   <Link to={"/lifestyle"}>
                     <ArticleCard
@@ -525,72 +524,68 @@ export default function HomeHeroPage() {
                   ))}
                 </Slider>
               </div>
-                  <Link to={"/style"}>
-
-              <InstagramProfile
-                profileImg={td28}
-                username="CODESUPPLY.CO"
-                handle="CODE SUPPLY CO."
-                stats="33 FOLLOWING 35 FOLLOWERS"
-                images={[td21, td22, td23, td24, td29, td30]}
-                className="hidden lg:block"
-              />
+              <Link to={"/style"}>
+                <InstagramProfile
+                  profileImg={td28}
+                  username="CODESUPPLY.CO"
+                  handle="CODE SUPPLY CO."
+                  stats="33 FOLLOWING 35 FOLLOWERS"
+                  images={[td21, td22, td23, td24, td29, td30]}
+                  className="hidden lg:block"
+                />
               </Link>
-                  <Link to={"/page2"}>
-
-              <ProfileCard
-                profileImg={td28}
-                username="CODESUPPLY.CO"
-                handle="CODE SUPPLY CO."
-                stats="3 FOLLOWING 129 FOLLOWERS"
-                bio="It's been a long way, but we've just reached a huge 10k sales milestone..."
-                className="hidden lg:block"
-              />
+              <Link to={"/page2"}>
+                <ProfileCard
+                  profileImg={td28}
+                  username="CODESUPPLY.CO"
+                  handle="CODE SUPPLY CO."
+                  stats="3 FOLLOWING 129 FOLLOWERS"
+                  bio="It's been a long way, but we've just reached a huge 10k sales milestone..."
+                  className="hidden lg:block"
+                />
               </Link>
-                  <Link to={"/page6"}>
-
-              <TrendingPostsSidebar
-                posts={[
-                  {
-                    img: td9,
-                    title: "The 14 Best Art Museums in the World",
-                    date: "MAY 11,2019",
-                    views: "230 VIEWS",
-                  },
-                  {
-                    img: td10,
-                    title: "The 14 Best Art Museums in the World",
-                    date: "MAY 11,2019",
-                    views: "2.4k VIEWS",
-                  },
-                  {
-                    img: td11,
-                    title: "The 14 Best Art Museums in the World",
-                    date: "MAY 11,2019",
-                    views: "1.9k VIEWS",
-                  },
-                  {
-                    img: td12,
-                    title: "The 14 Best Art Museums in the World",
-                    date: "MAY 11,2019",
-                    views: "2.6k VIEWS",
-                  },
-                ]}
-                className="hidden lg:block"
-              />
+              <Link to={"/page6"}>
+                <TrendingPostsSidebar
+                  posts={[
+                    {
+                      img: td9,
+                      title: "The 14 Best Art Museums in the World",
+                      date: "MAY 11,2019",
+                      views: "230 VIEWS",
+                    },
+                    {
+                      img: td10,
+                      title: "The 14 Best Art Museums in the World",
+                      date: "MAY 11,2019",
+                      views: "2.4k VIEWS",
+                    },
+                    {
+                      img: td11,
+                      title: "The 14 Best Art Museums in the World",
+                      date: "MAY 11,2019",
+                      views: "1.9k VIEWS",
+                    },
+                    {
+                      img: td12,
+                      title: "The 14 Best Art Museums in the World",
+                      date: "MAY 11,2019",
+                      views: "2.6k VIEWS",
+                    },
+                  ]}
+                  className="hidden lg:block"
+                />
               </Link>
 
               <div
                 className={`shop-sidebar w-full p-6 overflow-y-auto transition-all duration-300 md:sticky top-0 bottom-0 z-40 
               }`}
               >
-                                  <Link to={"/page9"}>
-
-                <img
-                  className="h-full w-full object-cover "
-                  src={td31}
-                  alt="Sticky"
-                />
+                <Link to={"/page9"}>
+                  <img
+                    className="h-full w-full object-cover "
+                    src={td31}
+                    alt="Sticky"
+                  />
                 </Link>
               </div>
             </div>
