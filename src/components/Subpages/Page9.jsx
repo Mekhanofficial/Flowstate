@@ -14,7 +14,7 @@ import SocialIcons from "../SocialIcons";
 import TrendingPostsSidebar from "../TrendingPostSidebar";
 import SliderCard from "../SliderCard";
 import td1 from "../../images/td1.jpg";
-import td2 from "../../images/td1.jpg";
+import td2 from "../../images/td2.jpg";
 import td3 from "../../images/td3.jpg";
 import td4 from "../../images/td4.jpg";
 import td5 from "../../images/td5.jpg";
