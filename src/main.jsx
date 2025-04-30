@@ -9,7 +9,7 @@ import LifestylePage from "./pages/Lifestyle";
 import StylePage from "./pages/Style";
 import TravelPage from "./pages/Travel";
 import InteriorPage from "./pages/Interior";
-import PageOne from "./components/Subpages/Page1";
+// import PageOne from "./components/Subpages/Page1";
 // import PageTwo from "./components/Subpages/Page2";
 // import PageThree from "./components/Subpages/Page3";
 // import PageFour from "./components/Subpages/Page4";
@@ -48,10 +48,10 @@ const proRouter = createBrowserRouter([
         path: "/Interior",
         element: <InteriorPage />,
       },
-      {
-        path: "/Page1",
-        element: <PageOne />,
-      },
+      // {
+      //   path: "/Page1",
+      //   element: <PageOne />,
+      // },
       // {
       //   path: "/Page2",
       //   element: <PageTwo />,
