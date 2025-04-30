@@ -13,14 +13,13 @@ import ProfileCard from "../ProfileCard";
 import SocialIcons from "../SocialIcons";
 import TrendingPostsSidebar from "../TrendingPostSidebar";
 import SliderCard from "../SliderCard";
-// import td1 from "../../../public/images/td1.jpg";
+import { Link } from "react-router-dom";
+
 import td2 from "../../../public/images/td2.jpg";
 import td3 from "../../../public/images/td3.jpg";
 import td4 from "../../../public/images/td4.jpg";
 import td5 from "../../../public/images/td5.jpg";
 import td6 from "../../../public/images/td6.jpg";
-import td7 from "../../../public/images/td7.jpg";
-import td8 from "../../../public/images/td8.jpg";
 import td9 from "../../../public/images/td9.jpg";
 import td10 from "../../../public/images/td10.jpg";
 import td11 from "../../../public/images/td11.jpg";
@@ -44,20 +43,10 @@ import td28 from "../../../public/images/td28.jpg";
 import td29 from "../../../public/images/td29.jpg";
 import td30 from "../../../public/images/td30.jpg";
 import td31 from "../../../public/images/td31.jpg";
-import td32 from "../../../public/images/td32.jpg";
-import td33 from "../../../public/images/td33.jpg";
 import td34 from "../../../public/images/td34.jpg";
 import td35 from "../../../public/images/td35.png";
 import td36 from "../../../public/images/td36.jpg";
-import td37 from "../../../public/images/td37.jpg";
-import td38 from "../../../public/images/td38.jpg";
-import td39 from "../../../public/images/td39.jpg";
-import td40 from "../../../public/images/td40.jpg";
-import td41 from "../../../public/images/td41.jpg";
-import td42 from "../../../public/images/td42.jpg";
-import td43 from "../../../public/images/td43.jpg";
-import td44 from "../../../public/images/td44.jpg";
-import ballerina from "../../../public/images/ballerina.jpg";
+
 
 export default function PageThree() {
   const productsTwo = [
@@ -112,50 +101,57 @@ export default function PageThree() {
     ],
   };
 
-  const products = [
-    {
-      id: 1,
-      img: td2,
-      category: "STYLE",
-      title: "6 Winning Artists Take On Modern Photography",
-      date: "JOANNA WELLICK . APRIL 28,2019",
-    },
-    {
-      id: 2,
-      img: td2,
-      category: "STYLE",
-      title: "How Not To Be Loud: Artists Against the Economy",
-      date: "JOANNA WELLICK . APRIL 28,2019",
-    },
-    {
-      id: 3,
-      img: td3,
-      category: "STYLE",
-      title: "The 21st Century Art Movement - What is it?",
-      date: "JOANNA WELLICK . APRIL 28,2019",
-    },
-    {
-      id: 4,
-      img: td4,
-      category: "STYLE",
-      title: "10 Famous Female Painters Every Art Lover Should Know",
-      date: "JOANNA WELLICK . APRIL 28,2019",
-    },
-    {
-      id: 5,
-      img: td5,
-      category: "STYLE",
-      title: "8 of the Most Shocking Artworks Throughout History",
-      date: "JOANNA WELLICK . APRIL 28,2019",
-    },
-    {
-      id: 6,
-      img: td6,
-      category: "STYLE",
-      title: "10 Interactive Street Art Works That Rocked",
-      date: "JOANNA WELLICK . APRIL 28,2019",
-    },
-  ];
+   const products = [
+      {
+        id: 1,
+        img: td1,
+        category: "STYLE",
+        title: "6 Winning Artists Take On Modern Photography",
+        date: "JOANNA WELLICK . APRIL 28,2019",
+        link: "/page4",
+      },
+      {
+        id: 2,
+        img: td2,
+        category: "STYLE",
+        title: "How Not To Be Loud: Artists Against the Economy",
+        date: "JOANNA WELLICK . APRIL 28,2019",
+        link: "/page5",
+      },
+      {
+        id: 3,
+        img: td3,
+        category: "STYLE",
+        title: "The 21st Century Art Movement - What is it?",
+        date: "JOANNA WELLICK . APRIL 28,2019",
+        link: "/page6",
+      },
+      {
+        id: 4,
+        img: td4,
+        category: "STYLE",
+        title: "10 Famous Female Painters Every Art Lover Should Know",
+        date: "JOANNA WELLICK . APRIL 28,2019",
+        link: "/page7",
+      },
+      {
+        id: 5,
+        img: td5,
+        category: "STYLE",
+        title: "8 of the Most Shocking Artworks Throughout History",
+        date: "JOANNA WELLICK . APRIL 28,2019",
+        link: "/page8",
+      },
+      {
+        id: 6,
+        img: td6,
+        category: "STYLE",
+        title: "10 Interactive Street Art Works That Rocked",
+        date: "JOANNA WELLICK . APRIL 28,2019",
+        link: "/page9",
+      },
+    ];
+  
 
   const settings = {
     dots: true,
@@ -208,38 +204,17 @@ export default function PageThree() {
     <div className="bg-zinc-950 min-h-screen text-gray-300">
       <div
         className="relative w-full h-96 bg-cover mb-10 bg-center lg:bg-fixed flex flex-col justify-center items-center"
-        style={{ backgroundImage: `url(${td15})` }}
+        style={{ backgroundImage: `url(${td34})` }}
       >
         {/* Semi-transparent black overlay */}
         <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
 
         {/* Text Content Container */}
         <div className="text-center text-gray-200 px-4 sm:px-6 md:px-8 max-w-4xl relative z-10">
-          {/* Subheading */}
-          <h2 className="text-sm sm:text-base lg:text-xs font-bold mb-1 uppercase tracking-widest">
-            Casual & Everyday
-          </h2>
-
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-            Effortlessly blend comfort <br className="hidden sm:block" /> &
-            style!
+            8 Essential Steps to Collecting Emerging Art
           </h1>
-
-          {/* Description */}
-          <h3 className="text-sm sm:text-base lg:text-md mb-8 text-gray-300 font-semibold">
-            Effortlessly blend comfort and style with our Casual & Everyday
-            collection, featuring cozy sweaters, versatile denim, laid-back
-            tees, and relaxed-fit joggers for your everyday adventures.
-          </h3>
-
-          {/* Call-to-Action Button */}
-          <a
-            href="#"
-            className="inline-block px-8 py-3 text-sm border border-white text-white font-semibold hover:text-[#16bb7c]"
-          >
-            VIEW COLLECTION
-          </a>
         </div>
       </div>
 
@@ -284,6 +259,21 @@ export default function PageThree() {
         <div className="flex-1 flex flex-col lg:flex-row">
           {/* Article Content - Center Column */}
           <div className="flex-1 py-8 px-4 md:px-8 lg:px-12 max-w-4xl mx-auto">
+            <div
+              className="relative w-full h-96 mb-10 bg-cover bg-center lg:bg-fixed flex flex-col justify-center items-center"
+              style={{ backgroundImage: `url(${td36})` }}
+            >
+              {/* Semi-transparent black overlay */}
+              <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
+
+              {/* Text Content Container */}
+              <div className="text-center text-gray-200 px-4 sm:px-6 md:px-8 max-w-4xl relative z-10">
+                {/* Main Heading */}
+                <h1 className="text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight">
+                  JOANNA WELLICK . APRIL 28,2019{" "}
+                </h1>
+              </div>
+            </div>
             <div>
               <div className="space-y-10">
                 <div className="text-center">
@@ -458,7 +448,7 @@ export default function PageThree() {
 
                   <div className="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto">
                     <input
-                      className="flex-grow px-5 py-3 bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="flex-grow px-5 py-3 bg-zinc-950 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       type="email"
                       placeholder="Enter your email"
                     />
@@ -505,9 +495,11 @@ export default function PageThree() {
                         {/* Hover overlay */}
                         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                           <div className="text-center">
-                            <button className="bg-white text-black px-4 py-2 text-sm font-bold hover:bg-black hover:text-white transition-all duration-300 rounded-full">
-                              VIEW POST
-                            </button>
+                            <Link to={product.link}>
+                              <button className="bg-white text-black px-4 py-2 text-sm font-bold hover:bg-black hover:text-white transition-all duration-300 rounded-full">
+                                VIEW POST
+                              </button>
+                            </Link>
                             <div className="flex justify-center mt-4 space-x-4">
                               <FontAwesomeIcon
                                 icon={faShare}
@@ -540,9 +532,9 @@ export default function PageThree() {
 
                 <hr className="relative top-7 border-t-1 border-zinc-800" />
               </div>
-              <hr className="relative top-7 border-t-1 border-zinc-800" />
+              <hr className="relative top-7 border-t-1 mb-16 border-zinc-800" />
 
-              <div className="py-12 px-4 sm:px-6 bg-zinc-900 text-white text-left rounded-lg">
+              <div className="py-12 sm:px-6 bg-zinc-800 text-white text-left ">
                 <div className="max-w-4xl mx-auto md:mx-24">
                   <h1 className="text-4xl font-bold text-left">
                     Leave a Reply
@@ -715,9 +707,9 @@ export default function PageThree() {
               ]}
             />
             <div className="sticky top-0 z-10">
-              <div className="w-full p-6">
+              <div className="w-full p-3">
                 <img
-                  className="w-full h-auto object-cover rounded-lg"
+                  className="w-full object-cover "
                   src={td31}
                   alt="Sticky content"
                 />

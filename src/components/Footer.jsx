@@ -40,17 +40,7 @@ import td31 from "../../public/images/td31.jpg";
 import td32 from "../../public/images/td32.jpg";
 import td33 from "../../public/images/td33.jpg";
 import td34 from "../../public/images/td34.jpg";
-import td35 from "../../public/images/td35.png";
-import td36 from "../../public/images/td36.jpg";
-import td37 from "../../public/images/td37.jpg";
-import td38 from "../../public/images/td38.jpg";
-import td39 from "../../public/images/td39.jpg";
-import td40 from "../../public/images/td40.jpg";
-import td41 from "../../public/images/td41.jpg";
-import td42 from "../../public/images/td42.jpg";
-import td43 from "../../public/images/td43.jpg";
-import td44 from "../../public/images/td44.jpg";
-import ballerina from "../../public/images/ballerina.jpg";
+import { Link } from "react-router-dom";
 
 export default function FooterPage() {
   const navigationItems = [
@@ -81,21 +71,25 @@ export default function FooterPage() {
       img: td32,
       title: "8 Ways to Use Digital Drawing in the Art Room",
       date: "MAY 24, 2019",
+      link: "/page1",
     },
     {
       img: td33,
       title: "Collector Favorites: Bestselling Artists of the Year",
       date: "MAY 23, 2019",
+      link: "/page2",
     },
     {
       img: td34,
       title: "8 Essential Steps to Collecting Emerging Art",
       date: "MAY 23, 2019",
+      link: "/page3",
     },
     {
       img: td26,
       title: "Why Successful People Are Also Art Collectors",
       date: "MAY 23, 2019",
+      link: "/page1",
     },
   ];
 
@@ -137,7 +131,7 @@ export default function FooterPage() {
 
   return (
     <>
-      <div className="bg-zinc-900 pt-12">
+      <div className="bg-zinc-950 pt-12">
         <div className="mx-16 flex flex-col lg:flex-row gap-8">
           <div className="lg:w-1/3 order-2 lg:order-1">
             <h3 className="text-lg font-semibold text-white mb-6">
@@ -146,25 +140,28 @@ export default function FooterPage() {
 
             <div className="space-y-8">
               {recentArticles.map((article) => (
-                <article
+                <Link
+                  to={article.link}
                   key={article.title}
-                  className="flex gap-4 group cursor-pointer"
+                  className="block group"
                 >
-                  <div className="w-24 h-24 flex-shrink-0 overflow-hidden">
-                    <img
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      src={article.img}
-                      alt={article.title}
-                      loading="lazy"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-medium mb-1 group-hover:text-blue-400 transition-colors">
-                      {article.title}
-                    </h4>
-                    <p className="text-xs text-zinc-500">{article.date}</p>
-                  </div>
-                </article>
+                  <article className="flex gap-4 cursor-pointer">
+                    <div className="w-24 h-24 flex-shrink-0 overflow-hidden">
+                      <img
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        src={article.img}
+                        alt={article.title}
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium mb-1 group-hover:text-blue-400 transition-colors">
+                        {article.title}
+                      </h4>
+                      <p className="text-xs text-zinc-500">{article.date}</p>
+                    </div>
+                  </article>
+                </Link>
               ))}
             </div>
           </div>
@@ -196,7 +193,7 @@ export default function FooterPage() {
               ].map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 bg-zinc-900 hover:bg-zinc-800 text-sm text-zinc-300 cursor-pointer transition-colors"
+                  className="px-3 py-1 bg-zinc-950 hover:bg-zinc-800 text-sm text-zinc-300 cursor-pointer transition-colors"
                 >
                   {tag}
                 </span>

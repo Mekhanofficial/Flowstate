@@ -109,7 +109,7 @@ export default function StYle() {
   };
   return (
     <>
-      <div className="bg-zinc-900">
+      <div className="bg-zinc-950">
         <div className="flex flex-col lg:flex-row mx-4 md:mx-10">
           {/* Left Content Section */}
           <div className="flex-1">
@@ -367,7 +367,7 @@ export default function StYle() {
 
             <div className="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto">
               <input
-                className="flex-grow px-5 py-3 bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-grow px-5 py-3 bg-zinc-950 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 type="email"
                 placeholder="Enter your email"
               />

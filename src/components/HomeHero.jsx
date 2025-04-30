@@ -177,7 +177,7 @@ export default function HomeHeroPage() {
 
   return (
     <>
-      <section className="bg-zinc-900 ">
+      <section className="bg-zinc-950 ">
         <div className="relative top-20 p-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -603,7 +603,7 @@ export default function HomeHeroPage() {
 
             <div className="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto">
               <input
-                className="flex-grow px-5 py-3 bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-grow px-5 py-3 bg-zinc-950 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 type="email"
                 placeholder="Enter your email"
               />

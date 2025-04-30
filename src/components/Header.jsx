@@ -70,7 +70,7 @@ export default function HeaderPage() {
         className="absolute inset-0 bg-black bg-opacity-50"
         onClick={toggleMobileMenu}
       ></div>
-      <div className="absolute left-0 top-0 h-full w-64 bg-zinc-900 p-4 overflow-y-auto">
+      <div className="absolute left-0 top-0 h-full w-64 bg-zinc-950 p-4 overflow-y-auto">
         <button
           onClick={toggleMobileMenu}
           className="absolute top-4 right-4 hover:text-zinc-300"
@@ -168,7 +168,7 @@ export default function HeaderPage() {
   );
 
   const DesktopSidebar = () => (
-    <div className="hidden lg:block fixed left-0 top-0 h-full w-80 bg-zinc-900 p-6 z-40">
+    <div className="hidden lg:block fixed left-0 top-0 h-full w-80 bg-zinc-950 p-6 z-40">
       <div className="h-full flex flex-col">
         <button
           onClick={toggleDesktopSidebar}
@@ -248,7 +248,7 @@ export default function HeaderPage() {
       {isMobileMenuOpen && <MobileSidebar />}
       {isDesktopSidebarOpen && <DesktopSidebar />}
 
-      <header className="bg-zinc-900 text-white">
+      <header className="bg-zinc-950 text-white">
         {/* Top Bar */}
         <div className="hidden md:block">
           <div className="container mx-auto px-4 py-2">
