@@ -11,7 +11,7 @@ import ProfileCard from "../../components/ProfileCard";
 import SocialIcons from "../../components/SocialIcons";
 import TrendingPostsSidebar from "../../components/TrendingPostSidebar";
 import SliderCard from "../../components/SliderCard";
-// import td1 from "../../../public/images/td1.jpg";
+import td1 from "../../../public/images/td1.jpg";
 import td2 from "../../../public/images/td2.jpg";
 import td3 from "../../../public/images/td3.jpg";
 import td4 from "../../../public/images/td4.jpg";
@@ -49,6 +49,7 @@ import td35 from "../../../public/images/td35.png";
 import td36 from "../../../public/images/td36.jpg";
 import td37 from "../../../public/images/td37.jpg";
 import { Link } from "react-router-dom";
+import InstagramProfile from "../InstagramProfile";
 
 export default function PageTen() {
   const productsTwo = [

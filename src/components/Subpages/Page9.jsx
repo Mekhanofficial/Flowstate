@@ -7,13 +7,13 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faHeart, faMessage, faShare } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 import InstagramProfile from "../InstagramProfile";
 import ProfileCard from "../ProfileCard";
 import SocialIcons from "../SocialIcons";
 import TrendingPostsSidebar from "../TrendingPostSidebar";
 import SliderCard from "../SliderCard";
-// import td1 from "../../../public/images/td1.jpg";
+import td1 from "../../../public/images/td1.jpg";
 import td2 from "../../../public/images/td2.jpg";
 import td3 from "../../../public/images/td3.jpg";
 import td4 from "../../../public/images/td4.jpg";

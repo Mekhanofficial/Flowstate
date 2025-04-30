@@ -14,7 +14,7 @@ import SocialIcons from "../SocialIcons";
 import TrendingPostsSidebar from "../TrendingPostSidebar";
 import SliderCard from "../SliderCard";
 import { Link } from "react-router-dom";
-
+import td1 from "../../../public/images/td1.jpg";
 import td2 from "../../../public/images/td2.jpg";
 import td3 from "../../../public/images/td3.jpg";
 import td4 from "../../../public/images/td4.jpg";
