@@ -5,10 +5,10 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
-import LifestylePage from "./pages/Lifestyle";
-import StylePage from "./pages/Style";
-import TravelPage from "./pages/Travel";
-import InteriorPage from "./pages/Interior";
+// import LifestylePage from "./pages/Lifestyle";
+// import StylePage from "./pages/Style";
+// import TravelPage from "./pages/Travel";
+// import InteriorPage from "./pages/Interior";
 // import PageOne from "./components/Subpages/Page1";
 // import PageTwo from "./components/Subpages/Page2";
 // import PageThree from "./components/Subpages/Page3";
@@ -32,22 +32,22 @@ const proRouter = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
-      {
-        path: "/Lifestyle",
-        element: <LifestylePage />,
-      },
-      {
-        path: "/Style",
-        element: <StylePage />,
-      },
-      {
-        path: "/Travel",
-        element: <TravelPage />,
-      },
-      {
-        path: "/Interior",
-        element: <InteriorPage />,
-      },
+      // {
+      //   path: "/Lifestyle",
+      //   element: <LifestylePage />,
+      // },
+      // {
+      //   path: "/Style",
+      //   element: <StylePage />,
+      // },
+      // {
+      //   path: "/Travel",
+      //   element: <TravelPage />,
+      // },
+      // {
+      //   path: "/Interior",
+      //   element: <InteriorPage />,
+      // },
       // {
       //   path: "/Page1",
       //   element: <PageOne />,
