@@ -10,10 +10,10 @@ import Layout from "./components/Layout";
 // import TravelPage from "./pages/Travel";
 // import InteriorPage from "./pages/Interior";
 import PageOne from "./components/Subpages/Page1";
-// import PageTwo from "./components/Subpages/Page2";
-// import PageThree from "./components/Subpages/Page3";
-// import PageFour from "./components/Subpages/Page4";
-// import PageFive from "./components/Subpages/Page5";
+import PageTwo from "./components/Subpages/Page2";
+import PageThree from "./components/Subpages/Page3";
+import PageFour from "./components/Subpages/Page4";
+import PageFive from "./components/Subpages/Page5";
 // import PageSix from "./components/Subpages/Page6";
 // import PageSeven from "./components/Subpages/Page7";
 // import PageEight from "./components/Subpages/Page8";
@@ -52,22 +52,22 @@ const proRouter = createBrowserRouter([
         path: "/Page1",
         element: <PageOne />,
       },
-      // {
-      //   path: "/Page2",
-      //   element: <PageTwo />,
-      // },
-      // {
-      //   path: "/Page3",
-      //   element: <PageThree />,
-      // },
-      // {
-      //   path: "/Page4",
-      //   element: <PageFour />,
-      // },
-      // {
-      //   path: "/Page5",
-      //   element: <PageFive />,
-      // },
+      {
+        path: "/Page2",
+        element: <PageTwo />,
+      },
+      {
+        path: "/Page3",
+        element: <PageThree />,
+      },
+      {
+        path: "/Page4",
+        element: <PageFour />,
+      },
+      {
+        path: "/Page5",
+        element: <PageFive />,
+      },
       // {
       //   path: "/Page6",
       //   element: <PageSix />,
